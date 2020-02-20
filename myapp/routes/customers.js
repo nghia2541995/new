@@ -8,6 +8,7 @@ router.get("/", function(req, res, next) {
     err,
     rows
   ) {
+    console.log(rows)
     if (err) {
       req.flash("error", err);
       res.render("customers", { page_title: "Customers - Node.js", data: "" });
@@ -201,5 +202,4 @@ router.get("/delete/(:id)", function(req, res, next) {
     }
   );
 });
-
 module.exports = router;
